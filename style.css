@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.app
+{
+    position: fixed;
+    width: 100%;
+    height:100% ;
+    max-width: 600px;
+    border-right: 1px solid  #8074dc;
+    border-left: 1px solid  #8074dc;
+    border-radius: 15px;
+    
+}
+
+.app > .screen{
+    display: none;
+}
+
+.app > .screen.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.screen .form{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.screen .form-input{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.screen h2{
+    margin-bottom: 20px;
+    font-size: 30x;
+    color: #111;
+    border-bottom: 4px solid #555;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+.screen .form-input label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+.screen .form-input #username{
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #555;
+    font-size: 16px;
+}
+
+.screen .form button{
+    padding: 15px 35px ;
+    background-color: #111;
+    color: #eee;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chat-screen .header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px 10px 0 0 ;
+    background-color: #8074dc;
+}
+
+.chat-screen .header .logo{
+    font-size: 17px;
+    color:#fff;
+    font-weight: 500;
+}
+
+.chat-screen .header button{
+    padding: 5px 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: transparent;
+    color:#eee ;
+    font-size:16px ;
+    cursor: pointer;
+    outline: none;
+}
+
+.chat-screen .messages{
+    width: 100%;
+    height:85%;
+    overflow: auto;
+}
+
+.chat-screen .messages::-webkit-scrollbar{
+    width: 0;
+}
+
+.chat-screen .messages .message{
+    display: flex;
+    padding: 10px;
+}
+
+.chat-screen .messages .message > div{
+    max-width: 80%;
+    background: #8074dc;
+    box-shadow:0px 0px 20px 5px rgba(0 , 0 , 0 , 0.05) ;
+    padding: 10px;
+    border-radius: 0 20px 0 20px;
+    color: white;
+}
+
+.chat-screen .messages .message.my-message{
+    justify-content: flex-end;
+}
+.chat-screen .messages .message .other-message {
+    justify-content: flex-start;
+}
+
+.chat-screen .messages .message .name{
+    font-size:13px ;
+    color:#000;
+    margin-bottom: 5px;
+}
+
+.chat-screen .messages .message .text{
+    word-wrap: break-word;
+}
+
+.chat-screen .messages .update{
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+.chat-screen .typebox{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chat-screen .typebox #message-input{
+    height: 100%;
+    font-size: 1.1rem;
+    padding: 0 10px;
+    width: 85%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    border: 1px solid  #aca2f7;
+    background-color:  #d5d2ec;
+}
+
+.chat-screen .typebox button{
+    width: 80px;
+    height: 100%;
+    background-color: #8074dc;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    transition: all .2s;
+    border-radius: 15px;
+}
+
+.chat-screen .typebox button:active{
+    transform: scale(.9);
+}

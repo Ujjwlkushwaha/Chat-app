@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ChatApp</title>
+</head>
+<body>
+
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join ChatRoom</h2>
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="username">
+                </div>
+
+                <div class="form-input">
+                    <button id="join-user">Join</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- chat box -->
+
+        <div class="screen chat-screen ">
+            <!-- Title part  -->
+            <div class="header">
+                <div class="logo">ChatRoom</div>
+                <Button id="exit-chat">Exit</Button>
+            </div>
+
+            <!-- messege area -->
+            <div class="messages">
+
+                <!-- khali -->
+
+            </div>
+
+            <div class="typebox">
+                <input type="text" id="message-input" placeholder="Message">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
